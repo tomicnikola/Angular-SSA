@@ -1,0 +1,27 @@
+<table class="table table-hover text-center">
+    <thead class="thead-dark">
+        <th>Zemlja</th>
+        <th>Glavni grad</th>
+        <th>Broj stanovnika</th>
+        <th>Povrsina</th>
+        <th>Region</th>
+        <th>Zastava</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let country of countries">  
+            <td>{{ country.name }}</td>
+            <td>{{ country.capital }}</td>
+            <td>{{ country.population }}</td>
+            <td>{{ country.area }}</td>
+            <td>{{ country.region }}</td>
+            <td class="w-25"><img src="{{ country.flag }}" class="img-fluid"></td>
+        </tr>
+    </tbody>
+    <tfoot class="display-4">
+        <tr>
+            <td colspan="6">
+                Ukupno prikazano: {{ countries?.length }} zemalja
+            </td>
+        </tr>
+    </tfoot>
+</table>
